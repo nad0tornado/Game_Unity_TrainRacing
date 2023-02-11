@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7854604327335547321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519300746906066247}
+  m_Layer: 0
+  m_Name: SubwayTrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &519300746906066247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854604327335547321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8299249545410434433}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8299249545410563873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 519300746906066247}
+    m_Modifications:
+    - target: {fileID: 100032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7283077
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14861612
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7219458
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b920b6f905167dc4aaf2ad1916cf7c99, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+--- !u!4 &8299249545410434433 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400032, guid: caf1ea5753d1f554eb978e85345a4590, type: 3}
+  m_PrefabInstance: {fileID: 8299249545410563873}
+  m_PrefabAsset: {fileID: 0}
