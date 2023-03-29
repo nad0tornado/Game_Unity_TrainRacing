@@ -7,6 +7,7 @@
 ### Stack: Unity3D, C# (.NET 4.7.1)
 
 **Concepts Explored:** 
+- Composite Design Pattern (Component-based Architecture of Unity Game Components)
 - Encapsulation & Abstraction
 - Separation of Concerns & Single-Responsibility (SOLID)
 - Interfaces
