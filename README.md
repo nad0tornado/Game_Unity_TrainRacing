@@ -28,7 +28,7 @@ I hope to release this game on Steam or another platform in the future for other
 
 ![image](https://user-images.githubusercontent.com/67047470/228462977-7e5559ef-b93d-4402-bb02-8c95fb493507.png)
 
-
+**Original copyright "Xtreme Express" in the above image belongs to Syscom Entertainment and Midas Interactive Entertainment**
 
 **Future Plans:**
 - Drive a train from one end of the map to the other before time runs out, navigating tight bends and staying on the track
