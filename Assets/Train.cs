@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Train : MonoBehaviour, ITrain
 {
-  public float Speed { get; set; } = 0;
+  public float Speed { get; set; } = 10;
 
   [SerializeField]
   private float maxSpeed = 30;
@@ -14,12 +14,33 @@ public class Train : MonoBehaviour, ITrain
   private float acceleration = 1;
   public float Acceleration { get => acceleration; set => acceleration = value; }
 
+  private Spline currentSpline = null;
+  private SplinePoint endPoint = null;
+
+  void OnTriggerEnter(Collider col)
+  {
+    var splinePoint = col.gameObject.GetComponent<SplinePoint>();
+
+    if (splinePoint == null)
+      return;
+
+    currentSpline = splinePoint.GetComponentInParent<Spline>();
+  }
+
   // Update is called once per frame
   void Update()
   {
-    transform.Translate(transform.forward * Speed * Time.deltaTime * .1f);
+    transform.Translate(Vector3.forward * (Speed * Time.deltaTime * .1f));
 
-    if (Input.GetAxis("Vertical") == 0)
+    if (currentSpline != null)
+    {
+      var t = currentSpline.GetTFromPosition(transform.position);
+      transform.forward = currentSpline.CalculateDirection(t);
+    }
+
+    Debug.DrawRay(transform.position, transform.forward * .125f, Color.red, 30);
+
+    if (Input.GetAxis("Vertical") == 0 && false)
     {
       if (Speed > 0)
       {
@@ -38,4 +59,6 @@ public class Train : MonoBehaviour, ITrain
         Speed += Input.GetAxis("Vertical") * Acceleration * Time.deltaTime;
     }
   }
+
+
 }

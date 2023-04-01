@@ -5,7 +5,18 @@ using UnityEngine;
 
 public class TrainSpeaker : MonoBehaviour
 {
-  private ITrain train;
+  private ITrain _train;
+  private ITrain train
+  {
+    get
+    {
+      if (_train == null)
+        _train = GetComponent<Train>();
+
+      return _train;
+    }
+    set => _train = value;
+  }
 
   private bool playedBrakeRelease = false, playedBrakeApply = true, playedWheels = false;
   public AudioClip engineSound;
