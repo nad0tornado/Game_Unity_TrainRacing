@@ -6,9 +6,17 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class SplinePoint : MonoBehaviour
 {
-  void Start()
+  private Spline _spline;
+  public Spline Spline
   {
-    if (transform.GetComponentInParent<Spline>() == null)
-      throw new ApplicationException("A Spline point must be a direct child of a Spline component");
+    get
+    {
+      if (_spline == null)
+        _spline = GetComponentInParent<Spline>();
+      if (_spline == null)
+        throw new NullReferenceException("A SplinePoint cannot exist outside of a spline!");
+
+      return _spline;
+    }
   }
 }

@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Train : MonoBehaviour, ITrain
 {
-  public float Speed { get; set; } = 10;
+  public float Speed { get; set; } = 0;
 
   [SerializeField]
   private float maxSpeed = 30;
@@ -14,8 +15,8 @@ public class Train : MonoBehaviour, ITrain
   private float acceleration = 1;
   public float Acceleration { get => acceleration; set => acceleration = value; }
 
-  private Spline currentSpline = null;
-  private SplinePoint endPoint = null;
+  private Spline currentSpline;
+  private SplinePoint startPoint, endPoint;
 
   void OnTriggerEnter(Collider col)
   {
@@ -24,7 +25,21 @@ public class Train : MonoBehaviour, ITrain
     if (splinePoint == null)
       return;
 
-    currentSpline = splinePoint.GetComponentInParent<Spline>();
+    if (splinePoint.Spline != currentSpline)
+    {
+      Debug.Log("Entered a curve");
+
+      currentSpline = splinePoint.Spline;
+
+      startPoint = splinePoint;
+      endPoint = currentSpline.GetEndPoint(startPoint);
+    }
+    else if (splinePoint == endPoint)
+    {
+      Debug.Log("Exited a curve");
+      transform.forward = splinePoint.transform.forward;
+      currentSpline = null;
+    }
   }
 
   // Update is called once per frame
